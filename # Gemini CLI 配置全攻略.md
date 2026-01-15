@@ -84,15 +84,11 @@ Gemini CLI 构建了 **7 级优先级分层配置体系**，通过 `settings.j
         |BUILD_SANDBOX|构建自定义沙箱|`export BUILD_SANDBOX=1`|`set BUILD_SANDBOX=1`|
         
     - `.env` 文件配置示例
-        
-        plaintext
-        
-        ```plaintext
+
         GEMINI_MODEL=gemini-1.5-pro
         GEMINI_API_KEY=your-secret-key-xxx
         GEMINI_SANDBOX=true
-        ```
-        
+    
 2. **命令行参数配置**
     - 高频参数及使用示例
         
@@ -120,10 +116,9 @@ Gemini CLI 构建了 **7 级优先级分层配置体系**，通过 `settings.j
     3. 子目录上下文：当前目录子文件夹的 `GEMINI.md`（模块级细则）
 4. **上下文文件内容示例（Markdown 格式）**
     
-    markdown
     
-    ```markdown
     # 项目：用户管理系统（TypeScript 版）
+    
     ## 技术栈要求
     - 必须使用 TypeScript 5.0+，禁止使用 any 类型
     - 接口请求统一使用 utils/request.ts，添加 Token 请求头
@@ -132,7 +127,6 @@ Gemini CLI 构建了 **7 级优先级分层配置体系**，通过 `settings.j
     ## 禁止操作
     - 不修改 node_modules、src/assets 目录下的文件
     - 不新增未在 package.json 中声明的依赖包
-    ```
     
 5. **核心管理命令**
     - `/memory refresh`：强制重新扫描并加载所有上下文文件（修改文件后执行）
@@ -156,9 +150,7 @@ Gemini CLI 构建了 **7 级优先级分层配置体系**，通过 `settings.j
         2. 按内容脱敏：匹配 API 密钥、RSA 私钥、带密码的 URL 等格式
     - 自定义脱敏规则（`settings.json` 配置）
         
-        json
-        
-        ```json
+```json
         {
           "security": {
             "environmentVariableRedaction": {
@@ -167,8 +159,8 @@ Gemini CLI 构建了 **7 级优先级分层配置体系**，通过 `settings.j
             }
           }
         }
-        ```
-        
+```
+    
 3. **使用统计配置（隐私自主管控）**
     - 默认行为：匿名收集工具调用次数、模型请求成功率等数据，**不收集代码、提示词、文件内容**
     - 关闭方式：在 `settings.json` 中设置 `privacy.usageStatisticsEnabled: false`
