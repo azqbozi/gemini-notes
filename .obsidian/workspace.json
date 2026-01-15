@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Gemini CLI 配置全攻略.md",
+                "file": "Gemini CLI 认证.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Gemini CLI 配置全攻略"
+              "title": "Gemini CLI 认证"
             }
           }
         ],
@@ -212,8 +212,8 @@
   },
   "active": "4a2f743fc13055be",
   "lastOpenFiles": [
-    "Gemini CLI 认证.md",
     "Gemini CLI 配置全攻略.md",
+    "Gemini CLI 认证.md",
     "配置Gemini3.md",
     "Get-Start"
   ]
